@@ -20,6 +20,12 @@
 		A471921E2710A8280002F548 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A471921D2710A8280002F548 /* Assets.xcassets */; };
 		A47192212710A8280002F548 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A471921F2710A8280002F548 /* LaunchScreen.storyboard */; };
 		A47192262710A8280002F548 /* ReceiptSharingAppClip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = A47192122710A8250002F548 /* ReceiptSharingAppClip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A4B542042710EDED00CA6593 /* MasterStartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B542032710EDED00CA6593 /* MasterStartPageViewController.swift */; };
+		A4B542072710EE3D00CA6593 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B542062710EE3D00CA6593 /* ActionButton.swift */; };
+		A4B542082710EE3D00CA6593 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B542062710EE3D00CA6593 /* ActionButton.swift */; };
+		A4B5420B2710EEBD00CA6593 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B5420A2710EEBD00CA6593 /* UIColor+hex.swift */; };
+		A4B5420C2710EEBD00CA6593 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B5420A2710EEBD00CA6593 /* UIColor+hex.swift */; };
+		A4B5420E2710F86500CA6593 /* ReceiptPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B5420D2710F86500CA6593 /* ReceiptPhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +71,10 @@
 		A47192222710A8280002F548 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A47192232710A8280002F548 /* ReceiptSharingAppClip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReceiptSharingAppClip.entitlements; sourceTree = "<group>"; };
 		A471922B2710AE410002F548 /* ReceiptSharing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReceiptSharing.entitlements; sourceTree = "<group>"; };
+		A4B542032710EDED00CA6593 /* MasterStartPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterStartPageViewController.swift; sourceTree = "<group>"; };
+		A4B542062710EE3D00CA6593 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		A4B5420A2710EEBD00CA6593 /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
+		A4B5420D2710F86500CA6593 /* ReceiptPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptPhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +116,9 @@
 		A47191F927109C110002F548 /* ReceiptSharing */ = {
 			isa = PBXGroup;
 			children = (
+				A4B542092710EEB000CA6593 /* Helpers */,
+				A4B542052710EE2700CA6593 /* Buttons */,
+				A4B542022710EDDB00CA6593 /* Screens */,
 				A471922B2710AE410002F548 /* ReceiptSharing.entitlements */,
 				A47191FA27109C110002F548 /* AppDelegate.swift */,
 				A47191FC27109C110002F548 /* SceneDelegate.swift */,
@@ -131,6 +144,31 @@
 				A47192232710A8280002F548 /* ReceiptSharingAppClip.entitlements */,
 			);
 			path = ReceiptSharingAppClip;
+			sourceTree = "<group>";
+		};
+		A4B542022710EDDB00CA6593 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A4B542032710EDED00CA6593 /* MasterStartPageViewController.swift */,
+				A4B5420D2710F86500CA6593 /* ReceiptPhotoViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		A4B542052710EE2700CA6593 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				A4B542062710EE3D00CA6593 /* ActionButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		A4B542092710EEB000CA6593 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A4B5420A2710EEBD00CA6593 /* UIColor+hex.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,9 +275,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4B542042710EDED00CA6593 /* MasterStartPageViewController.swift in Sources */,
 				A47191FF27109C110002F548 /* ViewController.swift in Sources */,
 				A47191FB27109C110002F548 /* AppDelegate.swift in Sources */,
+				A4B5420B2710EEBD00CA6593 /* UIColor+hex.swift in Sources */,
 				A47191FD27109C110002F548 /* SceneDelegate.swift in Sources */,
+				A4B5420E2710F86500CA6593 /* ReceiptPhotoViewController.swift in Sources */,
+				A4B542072710EE3D00CA6593 /* ActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +291,9 @@
 			files = (
 				A47192192710A8250002F548 /* ViewController.swift in Sources */,
 				A47192152710A8250002F548 /* AppDelegate.swift in Sources */,
+				A4B5420C2710EEBD00CA6593 /* UIColor+hex.swift in Sources */,
 				A47192172710A8250002F548 /* SceneDelegate.swift in Sources */,
+				A4B542082710EE3D00CA6593 /* ActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,14 +467,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ReceiptSharing/ReceiptSharing.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 9DFM4N278E;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ReceiptSharing/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Рецепт-Шэринг";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Камера необходима чтобы сфотографировать чек";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -455,14 +501,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ReceiptSharing/ReceiptSharing.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 9DFM4N278E;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ReceiptSharing/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Рецепт-Шэринг";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Камера необходима чтобы сфотографировать чек";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -486,7 +534,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ReceiptSharingAppClip/ReceiptSharingAppClip.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 9DFM4N278E;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ReceiptSharingAppClip/Info.plist;
@@ -494,6 +542,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -518,7 +567,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ReceiptSharingAppClip/ReceiptSharingAppClip.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 9DFM4N278E;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ReceiptSharingAppClip/Info.plist;
@@ -526,6 +575,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
