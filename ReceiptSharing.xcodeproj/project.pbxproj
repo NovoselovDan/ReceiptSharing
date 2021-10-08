@@ -20,12 +20,16 @@
 		A471921E2710A8280002F548 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A471921D2710A8280002F548 /* Assets.xcassets */; };
 		A47192212710A8280002F548 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A471921F2710A8280002F548 /* LaunchScreen.storyboard */; };
 		A47192262710A8280002F548 /* ReceiptSharingAppClip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = A47192122710A8250002F548 /* ReceiptSharingAppClip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		A4B542042710EDED00CA6593 /* MasterStartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B542032710EDED00CA6593 /* MasterStartPageViewController.swift */; };
 		A4B542072710EE3D00CA6593 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B542062710EE3D00CA6593 /* ActionButton.swift */; };
 		A4B542082710EE3D00CA6593 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B542062710EE3D00CA6593 /* ActionButton.swift */; };
 		A4B5420B2710EEBD00CA6593 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B5420A2710EEBD00CA6593 /* UIColor+hex.swift */; };
 		A4B5420C2710EEBD00CA6593 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B5420A2710EEBD00CA6593 /* UIColor+hex.swift */; };
-		A4B5420E2710F86500CA6593 /* ReceiptPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B5420D2710F86500CA6593 /* ReceiptPhotoViewController.swift */; };
+		A4B54211271106C400CA6593 /* splash_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4B5420F271106C300CA6593 /* splash_logo@2x.png */; };
+		A4B54212271106C400CA6593 /* splash_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4B5420F271106C300CA6593 /* splash_logo@2x.png */; };
+		A4B54213271106C400CA6593 /* splash_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4B54210271106C400CA6593 /* splash_logo@3x.png */; };
+		A4B54214271106C400CA6593 /* splash_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4B54210271106C400CA6593 /* splash_logo@3x.png */; };
+		A4B54217271107A200CA6593 /* MasterStartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B54215271107A100CA6593 /* MasterStartPageViewController.swift */; };
+		A4B54218271107A200CA6593 /* ReceiptPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B54216271107A100CA6593 /* ReceiptPhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,10 +75,12 @@
 		A47192222710A8280002F548 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A47192232710A8280002F548 /* ReceiptSharingAppClip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReceiptSharingAppClip.entitlements; sourceTree = "<group>"; };
 		A471922B2710AE410002F548 /* ReceiptSharing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReceiptSharing.entitlements; sourceTree = "<group>"; };
-		A4B542032710EDED00CA6593 /* MasterStartPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterStartPageViewController.swift; sourceTree = "<group>"; };
 		A4B542062710EE3D00CA6593 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		A4B5420A2710EEBD00CA6593 /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
-		A4B5420D2710F86500CA6593 /* ReceiptPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptPhotoViewController.swift; sourceTree = "<group>"; };
+		A4B5420F271106C300CA6593 /* splash_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash_logo@2x.png"; sourceTree = "<group>"; };
+		A4B54210271106C400CA6593 /* splash_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash_logo@3x.png"; sourceTree = "<group>"; };
+		A4B54215271107A100CA6593 /* MasterStartPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterStartPageViewController.swift; sourceTree = "<group>"; };
+		A4B54216271107A100CA6593 /* ReceiptPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptPhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,8 @@
 				A471920327109C130002F548 /* Assets.xcassets */,
 				A471920527109C130002F548 /* LaunchScreen.storyboard */,
 				A471920827109C130002F548 /* Info.plist */,
+				A4B5420F271106C300CA6593 /* splash_logo@2x.png */,
+				A4B54210271106C400CA6593 /* splash_logo@3x.png */,
 			);
 			path = ReceiptSharing;
 			sourceTree = "<group>";
@@ -149,8 +157,8 @@
 		A4B542022710EDDB00CA6593 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				A4B542032710EDED00CA6593 /* MasterStartPageViewController.swift */,
-				A4B5420D2710F86500CA6593 /* ReceiptPhotoViewController.swift */,
+				A4B54215271107A100CA6593 /* MasterStartPageViewController.swift */,
+				A4B54216271107A100CA6593 /* ReceiptPhotoViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -254,6 +262,8 @@
 			files = (
 				A471920727109C130002F548 /* LaunchScreen.storyboard in Resources */,
 				A471920427109C130002F548 /* Assets.xcassets in Resources */,
+				A4B54211271106C400CA6593 /* splash_logo@2x.png in Resources */,
+				A4B54213271106C400CA6593 /* splash_logo@3x.png in Resources */,
 				A471920227109C110002F548 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +274,8 @@
 			files = (
 				A47192212710A8280002F548 /* LaunchScreen.storyboard in Resources */,
 				A471921E2710A8280002F548 /* Assets.xcassets in Resources */,
+				A4B54212271106C400CA6593 /* splash_logo@2x.png in Resources */,
+				A4B54214271106C400CA6593 /* splash_logo@3x.png in Resources */,
 				A471921C2710A8250002F548 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,12 +287,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4B542042710EDED00CA6593 /* MasterStartPageViewController.swift in Sources */,
+				A4B54218271107A200CA6593 /* ReceiptPhotoViewController.swift in Sources */,
 				A47191FF27109C110002F548 /* ViewController.swift in Sources */,
 				A47191FB27109C110002F548 /* AppDelegate.swift in Sources */,
 				A4B5420B2710EEBD00CA6593 /* UIColor+hex.swift in Sources */,
+				A4B54217271107A200CA6593 /* MasterStartPageViewController.swift in Sources */,
 				A47191FD27109C110002F548 /* SceneDelegate.swift in Sources */,
-				A4B5420E2710F86500CA6593 /* ReceiptPhotoViewController.swift in Sources */,
 				A4B542072710EE3D00CA6593 /* ActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
