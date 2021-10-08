@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  ReceiptSharing
+//  ReceiptSharingAppClip
 //
 //  Created by Daniil Novoselov on 08.10.2021.
 //
@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         let label = UILabel()
-        label.text = "ReceiptSharing"
+        label.text = "ReceiptSharingAppClip"
         label.textAlignment = .center
         label.font = .preferredFont(forTextStyle: .largeTitle, compatibleWith: nil)
         label.translatesAutoresizingMaskIntoConstraints = false

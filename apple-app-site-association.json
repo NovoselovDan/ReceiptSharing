@@ -1,0 +1,8 @@
+{
+    "webcredentials": {
+      "apps": ["ru.demo.receipt-sharing"]
+   },
+    "appclips": {
+        "apps": ["ru.demo.receipt-sharing.Clip"]
+    }
+} 
