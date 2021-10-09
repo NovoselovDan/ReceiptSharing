@@ -39,6 +39,7 @@
 		A4B54214271106C400CA6593 /* splash_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4B54210271106C400CA6593 /* splash_logo@3x.png */; };
 		A4B54217271107A200CA6593 /* MasterStartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B54215271107A100CA6593 /* MasterStartPageViewController.swift */; };
 		A4B54218271107A200CA6593 /* ReceiptPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B54216271107A100CA6593 /* ReceiptPhotoViewController.swift */; };
+		A4B5421A27116EC300CA6593 /* PositionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B5421927116EC300CA6593 /* PositionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		A4B54210271106C400CA6593 /* splash_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash_logo@3x.png"; sourceTree = "<group>"; };
 		A4B54215271107A100CA6593 /* MasterStartPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterStartPageViewController.swift; sourceTree = "<group>"; };
 		A4B54216271107A100CA6593 /* ReceiptPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptPhotoViewController.swift; sourceTree = "<group>"; };
+		A4B5421927116EC300CA6593 /* PositionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,10 +166,10 @@
 			children = (
 				1706A86A27116E4B0051E45A /* Services */,
 				1706A85D271166EB0051E45A /* Models */,
+				A4B5421C27116ECC00CA6593 /* Cells */,
 				A4B542092710EEB000CA6593 /* Helpers */,
 				A4B542052710EE2700CA6593 /* Buttons */,
 				A4B542022710EDDB00CA6593 /* Screens */,
-				A471922B2710AE410002F548 /* ReceiptSharing.entitlements */,
 				A47191FA27109C110002F548 /* AppDelegate.swift */,
 				A47191FC27109C110002F548 /* SceneDelegate.swift */,
 				A47191FE27109C110002F548 /* ViewController.swift */,
@@ -177,6 +179,7 @@
 				A471920827109C130002F548 /* Info.plist */,
 				A4B5420F271106C300CA6593 /* splash_logo@2x.png */,
 				A4B54210271106C400CA6593 /* splash_logo@3x.png */,
+				A471922B2710AE410002F548 /* ReceiptSharing.entitlements */,
 			);
 			path = ReceiptSharing;
 			sourceTree = "<group>";
@@ -220,6 +223,14 @@
 				A4B5420A2710EEBD00CA6593 /* UIColor+hex.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A4B5421C27116ECC00CA6593 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A4B5421927116EC300CA6593 /* PositionCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +346,7 @@
 				1706A861271167C10051E45A /* Item.swift in Sources */,
 				1706A86E271170C60051E45A /* ReceiptSplitViewController.swift in Sources */,
 				A47191FF27109C110002F548 /* ViewController.swift in Sources */,
+				A4B5421A27116EC300CA6593 /* PositionCell.swift in Sources */,
 				A47191FB27109C110002F548 /* AppDelegate.swift in Sources */,
 				1706A86727116A0B0051E45A /* Event.swift in Sources */,
 				A4B5420B2710EEBD00CA6593 /* UIColor+hex.swift in Sources */,
