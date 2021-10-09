@@ -101,7 +101,7 @@ class ReceiptProcessingViewController: UIViewController {
     }
     
     private func goToSplitVC() {
-        let splitVC = ReceiptSplitViewController()
+        let splitVC = ReceiptSplitViewController(commandProcessor: Client.shared)
         self.show(splitVC, sender: nil)
     }
 }
