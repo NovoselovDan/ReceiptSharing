@@ -77,7 +77,10 @@ class ReceiptPhotoViewController: UIViewController {
     
     @objc
     private func ditTapCapture() {
-        navigationController?.pushViewController(ReceiptSplitViewController(), animated: true)
+        navigationController?.pushViewController(
+            ReceiptProcessingViewController(),
+            animated: true
+        )
     }
 }
 
