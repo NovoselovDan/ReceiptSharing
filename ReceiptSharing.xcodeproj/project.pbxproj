@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1706A85F271167010051E45A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1706A85E271167010051E45A /* User.swift */; };
+		1706A861271167C10051E45A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1706A860271167C00051E45A /* Item.swift */; };
+		1706A863271167F60051E45A /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1706A862271167F60051E45A /* Selection.swift */; };
+		1706A865271168650051E45A /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1706A864271168650051E45A /* Command.swift */; };
+		1706A86727116A0B0051E45A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1706A86627116A0B0051E45A /* Event.swift */; };
+		1706A86927116DAE0051E45A /* InitialData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1706A86827116DAE0051E45A /* InitialData.swift */; };
+		1706A86C27116E920051E45A /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1706A86B27116E920051E45A /* DataSource.swift */; };
+		1706A86E271170C60051E45A /* ReceiptSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1706A86D271170C60051E45A /* ReceiptSplitViewController.swift */; };
+		1706A870271171580051E45A /* ReceiptCommandHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1706A86F271171580051E45A /* ReceiptCommandHandler.swift */; };
 		A47191FB27109C110002F548 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47191FA27109C110002F548 /* AppDelegate.swift */; };
 		A47191FD27109C110002F548 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47191FC27109C110002F548 /* SceneDelegate.swift */; };
 		A47191FF27109C110002F548 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47191FE27109C110002F548 /* ViewController.swift */; };
@@ -57,6 +66,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1706A85E271167010051E45A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1706A860271167C00051E45A /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		1706A862271167F60051E45A /* Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
+		1706A864271168650051E45A /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		1706A86627116A0B0051E45A /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		1706A86827116DAE0051E45A /* InitialData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialData.swift; sourceTree = "<group>"; };
+		1706A86B27116E920051E45A /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		1706A86D271170C60051E45A /* ReceiptSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptSplitViewController.swift; sourceTree = "<group>"; };
+		1706A86F271171580051E45A /* ReceiptCommandHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptCommandHandler.swift; sourceTree = "<group>"; };
 		A47191F727109C110002F548 /* ReceiptSharing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReceiptSharing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47191FA27109C110002F548 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A47191FC27109C110002F548 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +119,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1706A85D271166EB0051E45A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1706A85E271167010051E45A /* User.swift */,
+				1706A860271167C00051E45A /* Item.swift */,
+				1706A862271167F60051E45A /* Selection.swift */,
+				1706A864271168650051E45A /* Command.swift */,
+				1706A86627116A0B0051E45A /* Event.swift */,
+				1706A86827116DAE0051E45A /* InitialData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1706A86A27116E4B0051E45A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1706A86B27116E920051E45A /* DataSource.swift */,
+				1706A86F271171580051E45A /* ReceiptCommandHandler.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		A47191EE27109C110002F548 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +162,8 @@
 		A47191F927109C110002F548 /* ReceiptSharing */ = {
 			isa = PBXGroup;
 			children = (
+				1706A86A27116E4B0051E45A /* Services */,
+				1706A85D271166EB0051E45A /* Models */,
 				A4B542092710EEB000CA6593 /* Helpers */,
 				A4B542052710EE2700CA6593 /* Buttons */,
 				A4B542022710EDDB00CA6593 /* Screens */,
@@ -159,6 +201,7 @@
 			children = (
 				A4B54215271107A100CA6593 /* MasterStartPageViewController.swift */,
 				A4B54216271107A100CA6593 /* ReceiptPhotoViewController.swift */,
+				1706A86D271170C60051E45A /* ReceiptSplitViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -287,13 +330,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1706A86C27116E920051E45A /* DataSource.swift in Sources */,
 				A4B54218271107A200CA6593 /* ReceiptPhotoViewController.swift in Sources */,
+				1706A861271167C10051E45A /* Item.swift in Sources */,
+				1706A86E271170C60051E45A /* ReceiptSplitViewController.swift in Sources */,
 				A47191FF27109C110002F548 /* ViewController.swift in Sources */,
 				A47191FB27109C110002F548 /* AppDelegate.swift in Sources */,
+				1706A86727116A0B0051E45A /* Event.swift in Sources */,
 				A4B5420B2710EEBD00CA6593 /* UIColor+hex.swift in Sources */,
+				1706A85F271167010051E45A /* User.swift in Sources */,
+				1706A863271167F60051E45A /* Selection.swift in Sources */,
 				A4B54217271107A200CA6593 /* MasterStartPageViewController.swift in Sources */,
 				A47191FD27109C110002F548 /* SceneDelegate.swift in Sources */,
+				1706A865271168650051E45A /* Command.swift in Sources */,
+				1706A86927116DAE0051E45A /* InitialData.swift in Sources */,
 				A4B542072710EE3D00CA6593 /* ActionButton.swift in Sources */,
+				1706A870271171580051E45A /* ReceiptCommandHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
