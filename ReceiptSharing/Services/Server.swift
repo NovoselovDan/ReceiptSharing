@@ -11,9 +11,11 @@ final class Server: NSObject {
     
     private var users: [MCPeerID: User] = [:]
     private var items: [Item] = [
-        .init(title: "Пиво", price: 300),
-        .init(title: "Чипсы", price: 100),
-        .init(title: "Салат", price: 200)
+        .init(title: "Пицца 4 сыра", price: 300),
+        .init(title: "Картофель по деревенски", price: 100),
+        .init(title: "Крем-суп грибной", price: 200),
+        .init(title: "Пивко светленькое", price: 200),
+        .init(title: "Пивко темненькое", price: 200)
     ]
     
     private let session = MCSession(

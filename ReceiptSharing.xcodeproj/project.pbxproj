@@ -29,6 +29,7 @@
 		1706A87F271186250051E45A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1706A86627116A0B0051E45A /* Event.swift */; };
 		1706A880271186250051E45A /* InitialData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1706A86827116DAE0051E45A /* InitialData.swift */; };
 		1706A8822711863A0051E45A /* ReceiptSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1706A86D271170C60051E45A /* ReceiptSplitViewController.swift */; };
+		1706A88327118BE30051E45A /* PositionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B5421927116EC300CA6593 /* PositionCell.swift */; };
 		A47191FB27109C110002F548 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47191FA27109C110002F548 /* AppDelegate.swift */; };
 		A47191FD27109C110002F548 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47191FC27109C110002F548 /* SceneDelegate.swift */; };
 		A47191FF27109C110002F548 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47191FE27109C110002F548 /* ViewController.swift */; };
@@ -394,6 +395,7 @@
 				1706A87D271186250051E45A /* Selection.swift in Sources */,
 				1706A87B271186250051E45A /* Item.swift in Sources */,
 				1706A879271186190051E45A /* CommandProcessor.swift in Sources */,
+				1706A88327118BE30051E45A /* PositionCell.swift in Sources */,
 				1706A8822711863A0051E45A /* ReceiptSplitViewController.swift in Sources */,
 				1706A880271186250051E45A /* InitialData.swift in Sources */,
 				1706A87A2711861E0051E45A /* Connection.swift in Sources */,
