@@ -5,7 +5,7 @@ final class ReceiptSplitViewController: UIViewController {
     private let commandProcessor: CommandProcessor
     
     init(dataSource: DataSource = .shared,
-         commandProcessor: CommandProcessor = FakeCommandProcessor()) {
+         commandProcessor: CommandProcessor) {
         self.dataSource = dataSource
         self.commandProcessor = commandProcessor
         super.init(nibName: nil, bundle: nil)
@@ -13,5 +13,11 @@ final class ReceiptSplitViewController: UIViewController {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        title = "За что вы хотите заплатить?"
     }
 }
