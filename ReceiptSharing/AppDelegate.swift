@@ -19,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let isMaster = true
         
         if isMaster {
+            Server.shared.start()
+            Server.shared.process(command: .newSession(userName: "Антон"))
+            
             let window = UIWindow()
             window.makeKeyAndVisible()
             let vc = MasterStartPageViewController()

@@ -2,7 +2,7 @@ import Foundation
 
 typealias ItemId = UUID
 
-struct Item {
+struct Item: Codable {
     var id = ItemId()
     let title: String
     let price: Double
