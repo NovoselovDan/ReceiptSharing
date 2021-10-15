@@ -19,6 +19,7 @@ struct PositionCellModel {
         let color: UIColor
     }
     
+    let id: ItemId
     let title: String
     var counter: Int
     var badges: [Badge]
@@ -78,6 +79,14 @@ class PositionCell: UICollectionViewCell {
         return label
     }()
     
+    private let badgesStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.alignment = .center
+        stackView.spacing = 2
+        return stackView
+    }()
+    
     // MARK: - Init
     
     override init(frame: CGRect) {
@@ -102,9 +111,30 @@ class PositionCell: UICollectionViewCell {
         titleLabel.text = cellModel.title
         
         contentView.backgroundColor = cellModel.isHighlighted ? Colors.highlightedBackground : Colors.defaultBackground
+        
+        updateBadges(cellModel.badges)
     }
     
     // MARK: - Private
+    
+    private func updateBadges(_ badges: [PositionCellModel.Badge]) {
+        badgesStackView.arrangedSubviews.forEach { $0.isHidden = true }
+        badges.enumerated().forEach { index, badge in
+            let badgeView: BadgeView
+            if index < badgesStackView.arrangedSubviews.count {
+                badgeView = badgesStackView.subviews[index] as! BadgeView
+                badgeView.isHidden = false
+            } else {
+                badgeView = BadgeView()
+                badgesStackView.addArrangedSubview(badgeView)
+            }
+            
+            badgeView.label.text = "\(badge.counter)"
+            badgeView.backgroundColor = badge.color
+        }
+        
+        badgesStackView.isHidden = badges.isEmpty
+    }
     
     func commonInit() {
         contentView.backgroundColor = Colors.defaultBackground
@@ -135,10 +165,10 @@ class PositionCell: UICollectionViewCell {
             counterLabel.centerYAnchor.constraint(equalTo: labelsContainer.centerYAnchor),
             titleLabel.leftAnchor.constraint(equalTo: counterLabel.rightAnchor, constant: 16),
             titleLabel.centerYAnchor.constraint(equalTo: labelsContainer.centerYAnchor),
-            labelsContainer.rightAnchor.constraint(equalTo: titleLabel.rightAnchor)
+            labelsContainer.rightAnchor.constraint(greaterThanOrEqualTo: titleLabel.rightAnchor)
         ])
         contentStack.addArrangedSubview(labelsContainer)
-        
+        contentStack.addArrangedSubview(badgesStackView)
         contentStack.addArrangedSubview(plusButton)
         plusButton.widthAnchor.constraint(equalToConstant: Layout.buttonWidth).isActive = true
     }

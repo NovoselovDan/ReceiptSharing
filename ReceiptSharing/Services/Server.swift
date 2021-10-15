@@ -4,9 +4,9 @@ final class Server: NSObject {
     static let shared = Server()
     
     private let colors: [String] = [
-        "#FF0000",
-        "#00FF00",
-        "#0000FF"
+        "#FC0CC7",
+        "#09B5FF",
+        "#88FF12"
     ]
     
     private var users: [MCPeerID: User] = [:]
@@ -83,8 +83,10 @@ final class Server: NSObject {
             .firstIndex(where: { $0.userId == user.id }) {
             items[itemIndex].selections[selectionIndex].count += 1
         } else {
-            items[itemIndex].selections.append(.init(userId: user.id, count: 0))
+            items[itemIndex].selections.append(.init(userId: user.id, count: 1))
         }
+        
+        sendUpdateItemsEvent()
     }
     
     private func removeItemSelection(id: ItemId, peerID: MCPeerID) {
@@ -100,6 +102,8 @@ final class Server: NSObject {
         } else {
             items[itemIndex].selections.remove(at: selectionIndex)
         }
+        
+        sendUpdateItemsEvent()
     }
     
     private func complete(peerID: MCPeerID) {

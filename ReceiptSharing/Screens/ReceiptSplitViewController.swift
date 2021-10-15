@@ -3,7 +3,12 @@ import UIKit
 final class ReceiptSplitViewController: UIViewController {
     private let dataSource: DataSource
     private let commandProcessor: CommandProcessor
-    private var positionViewModels: [PositionCellModel] = []
+    private var positionCellModels: [PositionCellModel] = []
+    private let collectiomLayout = PositionsCollectionLayout()
+    private lazy var collectionView = UICollectionView(
+        frame: .zero,
+        collectionViewLayout: collectiomLayout
+    )
     
     init(dataSource: DataSource = .shared,
          commandProcessor: CommandProcessor) {
@@ -19,22 +24,44 @@ final class ReceiptSplitViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .white
         title = "За что вы хотите заплатить?"
         
+        view.addSubview(collectionView)
+        view.layoutMargins = .init(top: 32, left: 16, bottom: 32, right: 16)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        let collectionViewGuide = view.layoutMarginsGuide
+        collectionView.topAnchor
+            .constraint(equalTo: collectionViewGuide.topAnchor).isActive = true
+        collectionView.bottomAnchor
+            .constraint(equalTo: collectionViewGuide.bottomAnchor).isActive = true
+        collectionView.leadingAnchor
+            .constraint(equalTo: collectionViewGuide.leadingAnchor).isActive = true
+        collectionView.trailingAnchor
+            .constraint(equalTo: collectionViewGuide.trailingAnchor).isActive = true
+        
+        collectionView.dataSource = self
+        
+        collectionView.register(
+            PositionCell.self,
+            forCellWithReuseIdentifier: "\(PositionCell.self)"
+        )
+        
+        updatePositions()
         dataSource.onItemsUpdate = { [weak self] in
             self?.updatePositions()
         }
     }
     
     private func updatePositions() {
-        positionViewModels = dataSource.items.compactMap {
-            makePositionViewModel(for: $0)
+        positionCellModels = dataSource.items.compactMap {
+            makePositionCellModel(for: $0)
         }
         
-        // Reload collection view
+        collectionView.reloadData()
     }
     
-    private func makePositionViewModel(for item: Item) -> PositionCellModel? {
+    private func makePositionCellModel(for item: Item) -> PositionCellModel? {
         guard let currentUser = dataSource.currentUser else {
             return nil
         }
@@ -52,11 +79,42 @@ final class ReceiptSplitViewController: UIViewController {
         }
         
         return .init(
+            id: item.id,
             title: item.title,
             counter: selection?.count ?? 0,
             badges: badges,
             isEditingAvailable: true,
-            isHighlighted: false
+            isHighlighted: selection != nil
         )
+    }
+}
+
+extension ReceiptSplitViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        positionCellModels.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cellModel = positionCellModels[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: "\(PositionCell.self)",
+            for: indexPath
+        ) as! PositionCell
+        
+        cell.setup(with: cellModel)
+        cell.delegate = self
+        return cell
+    }
+}
+
+extension ReceiptSplitViewController: PositionCellDelegate {
+    func cellDidPressPlus(_ cell: PositionCell) {
+        guard let cellModel = cell.cellModel else { return }
+        commandProcessor.process(command: .addSelection(cellModel.id))
+    }
+    
+    func cellDidPressMinus(_ cell: PositionCell) {
+        guard let cellModel = cell.cellModel else { return }
+        commandProcessor.process(command: .removeSelection(cellModel.id))
     }
 }
