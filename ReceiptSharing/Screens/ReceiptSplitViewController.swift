@@ -10,6 +10,11 @@ final class ReceiptSplitViewController: UIViewController {
         collectionViewLayout: collectiomLayout
     )
     
+    private lazy var collectionView = UICollectionView(
+        frame: .zero,
+        collectionViewLayout: creatLayout()
+    )
+    
     init(dataSource: DataSource = .shared,
          commandProcessor: CommandProcessor) {
         self.dataSource = dataSource
@@ -86,6 +91,42 @@ final class ReceiptSplitViewController: UIViewController {
             isEditingAvailable: true,
             isHighlighted: selection != nil
         )
+    }
+    
+    // MARK: - Private
+    
+    private func creatLayout() -> UICollectionViewCompositionalLayout {
+        .init { [weak self] sectionIndex, _ in
+            guard let self = self else { return nil }
+            
+            switch sectionIndex {
+            case 0:
+                return self.createListSection()
+            default:
+                return nil
+            }
+        }
+    }
+    
+    private func createListSection() -> NSCollectionLayoutSection {
+        let cellHeight = CGFloat(64)
+        let item = NSCollectionLayoutItem(
+            layoutSize:.init(
+                widthDimension: .fractionalWidth(1.0),
+                heightDimension: .absolute(cellHeight)
+            )
+        )
+        
+        let group = NSCollectionLayoutGroup.vertical(
+            layoutSize: .init(
+                widthDimension: .fractionalWidth(1),
+                heightDimension: .absolute(cellHeight)),
+            subitems: [item]
+        )
+        
+        let section = NSCollectionLayoutSection(group: group)
+        
+        return section
     }
 }
 
